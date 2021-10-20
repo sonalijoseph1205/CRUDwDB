@@ -1,0 +1,16 @@
+<table class="table table-hover">
+    <tr>
+        <th>[Student Id]-Name</th>
+        <th>Department</th>
+        <th>Contact</th>
+    </tr>
+    <tr *ngFor="let stu of service.list">
+        
+
+
+        <td (click)="populateForm(stu)">[{{stu.StuCode}}]-{{stu.FullName}}</td>
+        <td (click)="populateForm(stu)">{{stu.Department}}</td>
+        <td (click)="populateForm(stu)">{{stu.Mobile}}</td>
+        <td><button (click)="onDelete(stu.StudentID)" class="btn btn-sm btn-outline-danger">X</button></td>
+    </tr>
+</table>
